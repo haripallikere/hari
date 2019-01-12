@@ -1,0 +1,537 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.pad {
+  padding: 20px;
+}
+
+/*
+  ========================================
+	Header
+  ========================================
+*/
+.nav-header {
+  width: 100%;
+  z-index: 100;
+  height: 3rem;
+  padding: .10rem;
+  background-color: transparent;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-fixed {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+}
+
+.container .toggle-screen {
+  display: none;
+}
+
+.container img {
+  height: 60px;
+  width: 60px;
+  padding-bottom: 10px;
+}
+
+.container li {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+.container li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.container span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: .50rem;
+  font-size: .9rem;
+  color: silver;
+}
+
+/*
+  ========================================
+	HERO
+  ========================================
+*/
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: bottom;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(42, 37, 42, 0.3)), to(rgba(32, 29, 32, 0.5))), url(../media/markus-spiske-109588-unsplash.jpg);
+  background: linear-gradient(rgba(42, 37, 42, 0.3), rgba(32, 29, 32, 0.5)), url(../media/markus-spiske-109588-unsplash.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 82%, 51% 94%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0, 100% 82%, 51% 94%, 0% 100%);
+  width: 100%;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+  height: 80vh;
+}
+
+.hero .img {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  border: 5px solid pink;
+}
+
+.hero .img .overlay .img-mine {
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  background-image: url(../media/logo.png);
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  animation: ripple 2.0s 0.2s infinite;
+  -webkit-animation: ripple 2.0s 0.2s  infinite;
+}
+
+@-webkit-keyframes ripple {
+  20% {
+    -webkit-box-shadow: 0px 0px 0px 6px #fff, 0px 0px 0px 20px purple;
+            box-shadow: 0px 0px 0px 6px #fff, 0px 0px 0px 20px purple;
+  }
+  50% {
+    -webkit-box-shadow: 0px 0px 0px 6px #fff, 0px 0px 0px 25px purple, 0px 0px 0px 20px #fff, 0px 0px 2px 16px #888;
+            box-shadow: 0px 0px 0px 6px #fff, 0px 0px 0px 25px purple, 0px 0px 0px 20px #fff, 0px 0px 2px 16px #888;
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 6px #fff, 0px 0px 0px 8px purple, 0px 0px 0px 14px #fff, 0px 0px 2px 16px #888,  0px 0px 0px 22px #fff, 0px 0px 5px 24px #ddd;
+            box-shadow: 0px 0px 0px 6px #fff, 0px 0px 0px 8px purple, 0px 0px 0px 14px #fff, 0px 0px 2px 16px #888,  0px 0px 0px 22px #fff, 0px 0px 5px 24px #ddd;
+  }
+}
+
+.hero .img .overlay:hover .img-mine {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+}
+
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: flex-end;
+}
+
+.hero .hero-container {
+  position: absolute;
+  right: 5%;
+  max-width: 50%;
+}
+
+.hero .hero-container h1 {
+  font-size: 3rem;
+  letter-spacing: .20rem;
+  color: wheat;
+  text-shadow: 0 0 2px purple,0 0 4px purple,0 0 6px purple,0 0 7px purple,0 0 8px purple;
+}
+
+.hero .hero-container button {
+  height: 3.8rem;
+  width: 30%;
+  margin: 25px 0;
+  font-size: 1.1rem;
+  padding-bottom: 4px;
+  border-radius: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: purple;
+  color: wheat;
+  -webkit-transition: all .2s linear, border .5s ease-in-out;
+  transition: all .2s linear, border .5s ease-in-out;
+}
+
+.hero .hero-container i {
+  font-size: 1.8rem;
+  color: papayawhip;
+  margin-left: 10px;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.hero button:hover {
+  background-color: palevioletred;
+  border: 3px solid red;
+  text-shadow: 0 0 2px purple;
+}
+
+.hero button:hover i {
+  color: red;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*
+  ========================================
+	PROJECTS
+  ========================================
+*/
+.projects {
+  display: -ms-grid;
+  display: grid;
+  padding: 3rem;
+  width: 100%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-gap: 40px;
+  margin-bottom: 40px;
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
+}
+
+.projects_ {
+  height: auto;
+  width: 80%;
+  border: 1px solid white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.projects_ img {
+  width: 100%;
+  height: auto;
+}
+
+.project_heading {
+  grid-column: -1 / 1;
+}
+
+.project_heading h2 {
+  font-size: 2.5rem;
+  color: purple;
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+}
+
+.project_heading .border_line {
+  margin: 0 auto;
+  width: 100%;
+  margin: 20px 0;
+  height: 10px;
+  border: 4px solid purple;
+  border-radius: 50%;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.btn {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.btn button {
+  width: 60%;
+  border: none;
+  height: 3rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn button:hover {
+  background-color: wheat;
+  -webkit-filter: grayscale(25%);
+          filter: grayscale(25%);
+  height: 2.8rem;
+  width: 40%;
+}
+
+/*
+  ========================================
+	SKILL
+  ========================================
+*/
+.skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  height: 60vh;
+  padding: 40px;
+  justify-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 16, 17, 0.3)), to(rgba(36, 31, 36, 0))), url(../media/apoorv-mittal-1079047-unsplash.jpg);
+  background-image: linear-gradient(rgba(17, 16, 17, 0.3), rgba(36, 31, 36, 0)), url(../media/apoorv-mittal-1079047-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.skills .skills_heading {
+  grid-column: -1 / 1;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  color: wheat;
+  text-shadow: 0 0 5px grey;
+}
+
+.skills p {
+  color: wheat;
+  font-size: 1.5rem;
+}
+
+.skills .border_line-skills {
+  margin: 0 auto;
+  width: 100%;
+  margin: 15px 0;
+  height: 10px;
+  border: 4px solid wheat;
+  border-radius: 50%;
+}
+
+.skills .icon {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid wheat;
+  position: relative;
+  color: wheat;
+}
+
+.skills .icon:hover {
+  background: purple;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.skills .icon:hover i {
+  color: whitesmoke;
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
+  font-size: 50px;
+}
+
+.skills h3 {
+  font-size: 2rem;
+  color: wheat;
+  margin: 10px 0;
+}
+
+.skills i {
+  font-size: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+/*
+  ========================================
+	SPECIALIZATION
+  ========================================
+*/
+.special {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  height: 30vh;
+  padding: 40px;
+  justify-items: center;
+  background-color: wheat;
+}
+
+.special .special_icon {
+  font-size: 7rem;
+  border: 1px solid wheat;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.special .special_icon i {
+  font-size: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: grey;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.special .special_icon:hover {
+  background-color: purple;
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
+}
+
+.special .special_icon:hover i:hover {
+  color: wheat;
+  font-size: 80px;
+}
+
+/*
+========================================
+		About
+========================================
+		*/
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 20rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  grid-gap: 25px;
+}
+
+.about h3 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about-me_img {
+  width: 100%;
+  text-align: center;
+}
+
+.about-me_img img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+}
+
+/*
+  ========================================
+	FOOTER
+  ========================================
+*/
+.footer {
+  height: 30rem;
+  background-image: url(../media/footer1.jpg);
+  background-size: cover;
+  -webkit-filter: grayscale(60%);
+          filter: grayscale(60%);
+  background-attachment: fixed;
+}
+/*# sourceMappingURL=style.css.map */
